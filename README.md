@@ -35,73 +35,30 @@ If you find NA-fWebSOD useful in your research, please consider citing:
 **Requirements:**
 
 - NVIDIA GPU, Linux, Python3.6
-- Caffe2 in pytorch v1.3.0, various standard Python packages, and the COCO API; Instructions for installing these dependencies are found below
 
 ### Caffe2
 
-Clone the pytorch repository:
 ```
 # pytorch=/path/to/clone/pytorch
+# NA-fWebSOD=/path/to/clone/NA-fWebSOD
 git clone https://github.com/pytorch/pytorch.git $pytorch
 cd $pytorch
 git checkout v1.3.0
 git submodule update --init --recursive
-```
-
-Install Python dependencies:
-```
 pip3 install -r $pytorch/requirements.txt
-```
-
-Build caffe2:
-```
 cd $pytorch
 sudo USE_OPENCV=On USE_LMDB=On BUILD_BINARY=On python3 setup.py install
-```
-
-
-### Other Dependencies
-
-Install the [COCO API](https://github.com/cocodataset/cocoapi):
-```
 pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-```
-
-Install the [pycococreator](https://github.com/waspinator/pycococreator):
-```
 pip3 install git+git://github.com/waspinator/pycococreator.git@0.2.0
-```
-
-
-###  NA-fWebSOD
-
-Clone the NA-fWebSOD repository:
-```
-# NA-fWebSOD=/path/to/clone/NA-fWebSOD
 git clone https://github.com/shenyunhang/NA-fWebSOD.git $NA-fWebSOD
 cd $NA-fWebSOD
 git submodule update --init --recursive
-```
-
-Install Python dependencies:
-```
 pip3 install -r requirements.txt
-```
-
-Set up Python modules:
-```
 make
-```
-
-Build the custom C++ operators library:
-```
 ./build_ops.sh
-```
 
 ### Dataset Preparation
-
 #### Training Data
-
 Download flickr_voc from this [here](https://1drv.ms/u/s!Am1oWgo9554dgQhBFu9FBPeCqjpz?e=WcVh9O) and untar File:
 ```
 tar xvf flickr_voc.tar
