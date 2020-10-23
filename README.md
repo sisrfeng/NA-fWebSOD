@@ -36,7 +36,6 @@ If you find NA-fWebSOD useful in your research, please consider citing:
 
 - NVIDIA GPU, Linux, Python3.6
 
-### Caffe2
 
 ```
 # pytorch=/path/to/clone/pytorch
@@ -56,6 +55,7 @@ git submodule update --init --recursive
 pip3 install -r requirements.txt
 make
 ./build_ops.sh
+```
 
 ### Dataset Preparation
 #### Training Data
