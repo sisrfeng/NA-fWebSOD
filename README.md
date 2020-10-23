@@ -44,15 +44,15 @@ git clone https://github.com/pytorch/pytorch.git $pytorch
 cd $pytorch
 git checkout v1.3.0
 git submodule update --init --recursive
-pip3 install -r $pytorch/requirements.txt
+pip install -r $pytorch/requirements.txt
 cd $pytorch
 sudo USE_OPENCV=On USE_LMDB=On BUILD_BINARY=On python3 setup.py install
-pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-pip3 install git+git://github.com/waspinator/pycococreator.git@0.2.0
+pip install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+pip install git+git://github.com/waspinator/pycococreator.git@0.2.0
 git clone https://github.com/shenyunhang/NA-fWebSOD.git $NA-fWebSOD
 cd $NA-fWebSOD
 git submodule update --init --recursive
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 make
 ./build_ops.sh
 ```
