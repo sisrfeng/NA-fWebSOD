@@ -38,8 +38,10 @@ If you find NA-fWebSOD useful in your research, please consider citing:
 
 
 ```
-# pytorch=/path/to/clone/pytorch
-# NA-fWebSOD=/path/to/clone/NA-fWebSOD
+
+### my path of NA-fWebSOD  is '/opt/data/private'
+# pytorch=~/pytorch
+
 git clone https://github.com/pytorch/pytorch.git $pytorch
 cd $pytorch
 git checkout v1.3.0
@@ -49,8 +51,8 @@ cd $pytorch
 sudo USE_OPENCV=On USE_LMDB=On BUILD_BINARY=On python3 setup.py install
 pip install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 pip install git+git://github.com/waspinator/pycococreator.git@0.2.0
-git clone https://github.com/shenyunhang/NA-fWebSOD.git $NA-fWebSOD
-cd $NA-fWebSOD
+git clone https://github.com/shenyunhang/NA-fWebSOD.git /opt/data/private
+cd /opt/data/private
 git submodule update --init --recursive
 pip install -r requirements.txt
 make
