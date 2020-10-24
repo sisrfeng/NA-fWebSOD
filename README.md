@@ -55,6 +55,8 @@ git clone https://github.com/shenyunhang/NA-fWebSOD.git /opt/data/private/webly
 cd /opt/data/private/webly
 git submodule update --init --recursive
 pip install -r requirements.txt
+sudo apt-get install libeigen3-dev
+ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
 make
 ./build_ops.sh
 ```
