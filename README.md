@@ -48,14 +48,14 @@ git checkout v1.3.0
 git submodule update --init --recursive
 pip install -r $pytorch/requirements.txt
 cd $pytorch
-sudo USE_OPENCV=On USE_LMDB=On BUILD_BINARY=On python3 setup.py install
+USE_OPENCV=On USE_LMDB=On BUILD_BINARY=On python3 setup.py install
 pip install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 pip install git+git://github.com/waspinator/pycococreator.git@0.2.0
 git clone https://github.com/shenyunhang/NA-fWebSOD.git /opt/data/private/webly
 cd /opt/data/private/webly
 git submodule update --init --recursive
 pip install -r requirements.txt
-sudo apt-get install libeigen3-dev
+apt-get install libeigen3-dev
 ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
 make
 ./build_ops.sh
